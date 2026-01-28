@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Criando API REST com Node.JS",
   "main": "src/server.js",
-  "scripts": {},
+  "scripts": {
+    "dev": "tsx watch src/server.ts"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/llorenzojorge/api-rest.git"
@@ -17,6 +19,7 @@
   "homepage": "https://github.com/llorenzojorge/api-rest#readme",
   "devDependencies": {
     "@types/node": "^20.14.12",
+    "tsx": "^4.16.2",
     "typescript": "^5.5.4"
   }
 }
