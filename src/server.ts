@@ -8,16 +8,15 @@ const app = express()
 app.use(express.json())
 
 // Aplicar o middleware para todas as rotas. (MIDDLEWARE GLOBAL)
-app.use(myMiddleware)
+// app.use(myMiddleware)
 
-// Método GET.
-app.get("/products", (request, response) => {
+// Middleware local em uma rota especifica 
+app.get("/products", myMiddleware, (request, response) => {
   const { page, limit } = request.query
   
   response.send(`Página ${page} de ${limit}`)
 })
 
-// Método POST.
 app.post("/products", (request, response) => {
   const { name, price } = request.body
 
