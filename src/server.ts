@@ -16,7 +16,9 @@ app.get("/products", (request, response) => {
 // Método POST.
 app.post("/products", (request, response) => {
   const { name, price } = request.body
-  response.send(`o produto: ${name} custa R$${price}`)
+
+  // response.send(`o produto: ${name} custa R$${price}`)
+  response.status(201).json({ name, price })
 })
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`))
