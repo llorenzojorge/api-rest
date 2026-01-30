@@ -1,10 +1,14 @@
 import express from "express"
+import { myMiddleware } from "./middlewares/my-middleware.js"
 
 const PORT = 3333
 
 const app = express()
 // Faz o Express esperar que os dados da requisição sejam do tipo JSON.
 app.use(express.json())
+
+// Aplicar o middleware para todas as rotas. (MIDDLEWARE GLOBAL)
+app.use(myMiddleware)
 
 // Método GET.
 app.get("/products", (request, response) => {
