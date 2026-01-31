@@ -1,7 +1,7 @@
 import express, { Request, Response, NextFunction } from "express"
 
 import { routes } from "./routes/index.js"
-import { AppError } from "./utils/AppError.js"
+import { AppError } from "./utils/app-error.js"
 
 const PORT = 3333
 
